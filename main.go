@@ -25,7 +25,7 @@ func main(){
   flag.Parse()
   
   //open the csv file
-  file, err :- os.Open(*csvPath)
+  file, err := os.Open(*csvPath)
   if err != nil {
     log.Println(err)
     return
