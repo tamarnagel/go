@@ -82,7 +82,7 @@ func main(){
   //if ticker is available first, the time limit has been reached
   select {
     case <- done:
-    fmt.Println("You beat it!")
+    break
     case <- ticker.C:
     fmt.Println("Time's up!")
   }
