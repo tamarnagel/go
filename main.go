@@ -88,7 +88,7 @@ func main(){
   //print the results
   fmt.Printf("You scored %d out of %d.\n", numCorrect,len(qaPair))
   //die, bitches
-  
+ 
   
 }
 
