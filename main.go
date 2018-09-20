@@ -51,7 +51,7 @@ func main(){
   done := make(chan bool)
   
   //create a scanner for user input
-  scanner :- bufio.NewScanner(os.Stdin)
+  scanner := bufio.NewScanner(os.Stdin)
   
   var userAnswer string
   qNum, numCorrect := 0, 0
@@ -66,7 +66,7 @@ func main(){
       userAnswer = scanner.Text()
       //trim leading and trailing whitespace
       userAnswer = strings.TrimSpace(userAnswer)
-      userAnswer = strins.ToLower(userAnswer)
+      userAnswer = strings.ToLower(userAnswer)
       answer = strings.ToLower(answer)
       //check the answer
       if answer == userAnswer {
