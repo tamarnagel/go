@@ -55,7 +55,7 @@ func main(){
   
   var userAnswer string
   qNum, numCorrect := 0, 0
-  //go func(){
+  go func(){
     //iteration order for maps in go is randomized
     for question, answer := range qaPair {
       qNum++
@@ -71,23 +71,25 @@ func main(){
       //check the answer
       if answer == userAnswer {
         numCorrect++
+        fmt.Printf("numCorrect is %d",numCorrect)
       }
     }
     done <- true
-  //}()
+  }()
   
   //select chooses the first channel with an available value
   //if done is available first, the user finished
   //if ticker is available first, the time limit has been reached
   select {
     case <- done:
+    fmt.Println("You beat it!")
     case <- ticker.C:
     fmt.Println("Time's up!")
   }
   
   //print the results
   fmt.Printf("You scored %d out of %d.\n", numCorrect,len(qaPair))
-  //die, bitches
+  
  
   
 }
