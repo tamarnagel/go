@@ -55,7 +55,7 @@ func main(){
   
   var userAnswer string
   qNum, numCorrect := 0, 0
-  go func(){
+  //go func(){
     //iteration order for maps in go is randomized
     for question, answer := range qaPair {
       qNum++
@@ -74,7 +74,7 @@ func main(){
       }
     }
     done <- true
-  }()
+  //}()
   
   //select chooses the first channel with an available value
   //if done is available first, the user finished
