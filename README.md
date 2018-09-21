@@ -1,3 +1,1 @@
-# go
 
-# TIME TO LEARN THIS LANGUAGE
