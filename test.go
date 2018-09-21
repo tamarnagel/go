@@ -17,9 +17,10 @@ func add ( x,y int) int {
 func swap (h,j string) (string, string) {
   return j, h
 }
-
+a,b := swap("fun", "joy")
 
 func main (){
   fmt.Printf("The adding function yields %d", add(1,1))
-  fmt.Printf(" The swapping function yields %d", swap("fun","joy"))
+  fmt.Printf(" The swapping function yields: ")
+  fmt.Println(a,b)
 }
