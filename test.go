@@ -21,5 +21,5 @@ func swap (h,j string) (string, string) {
 
 func main (){
   fmt.Printf("The adding function yields %d", add(1,1))
-  fmt.Printf(" The swapping function yields %d, swap("fun","joy"))
+  fmt.Printf(" The swapping function yields %d", swap("fun","joy"))
 }
